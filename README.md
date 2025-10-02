@@ -11,13 +11,13 @@ ICL email address `jurtasun@ic.ac.uk`
 ### Find the content of the course in GitHub:
 [LMS Introduction to probability, statistics and hypothesis testing](https://github.com/jurtasun/2026_lms_intro_probability_statistics)
 
-This course provides an introduction to probability and statistic inference.
+This course provides an introduction to the fields of probability and statistic inference.
 The topics covered will include basic concepts on probability theory, descriptive statistics, inference, and hypothesis testing. 
-The aim of the course is to provide strong foundations at the mathematical and theoretical level, while providing practical exercises to work on real data.
+The aim of the course is to provide strong foundations at both the mathematical and theoretical level, while providing practical exercises to work on real data.
 
 The course is organized in five chapters, covering the topics listed below. 
 All will be followed by a practical session and hands-on coding, both in `Python` and `R`. 
-No prior mathematical or programming experience is required for the attendance of this course.
+No prior mathematical or programming experience is required to attend this course.
 
 ## Roadmap of the course
 
