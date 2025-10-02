@@ -7,7 +7,6 @@ LMS email address `Jesus.Urtasun@lms.mrc.ac.uk`
 ICL email address `jurtasun@ic.ac.uk`
 
 <img src="/readme_figures/ukri_lms_logo.png" width = 700>
-<img src="/readme_figures/imperial_college_logo.png" width = 700>
 
 ### Find the content of the course in GitHub:
 [LMS Introduction to probability, statistics and hypothesis testing](https://github.com/jurtasun/2026_lms_intro_probability_statistics)
@@ -22,28 +21,38 @@ No prior mathematical or programming experience is required for the attendance o
 
 ## Roadmap of the course
 
-### Chapter 1
+### Chapter 1. Descriptive statistics
 
-- Chapter 1
+- The idea of population and sampling.
+- Describe central tendency and variation.
+- Data visualization: histogram, box, violin, dispresion.
 
-### Chapter 2
+### Chapter 2. Predictive probability
 
-- Chapter 2
+- Definition of probability and random events.
+- Discrete and continous probability distributions.
+- Mean and variance as expected values.
 
-### Chapter 3
+### Chapter 3. Parameter estimation
 
-- Chapter 3
+- Variables, parameters and estimators.
+- The Law of Large Numbers (LLN).
+- The Central Limit Theorem (CLT).
 
-### Chapter 4
+### Chapter 4. Hypothesis testing
 
-- Chapter 4
+- Prediction vs inference.
+- Hypothesis, statistic tests, significance and p-values.
+- Common examples of statistic tests (t-test, Fisher, &chi;<sup>2</sup>)
 
-### Chapter 5
+### Chapter 5. Bayesian probability
 
-- Chapter 5
+- The problem of conditional probability.
+- The frequentist and Bayesian definitions.
+- The Bayes rule and applications.
 
-## Getting `R` and `Python` set up on your own machine
-Getting `R` and `Python` set up on your own machine
+## Setting up `Python` and `R` on your own machine
+Setting up `Python` and `R` on your own machine
 
 ### Instructions for Mac and Linux
 Instructions for Mac and Linux
