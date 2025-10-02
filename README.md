@@ -21,31 +21,31 @@ No prior mathematical or programming experience is required for the attendance o
 
 ## Roadmap of the course
 
-### Chapter 1. Descriptive statistics
+### Chapter 1. Descriptive statistics.
 
 - The idea of population and sampling.
 - Describe central tendency and variation.
 - Data visualization: histogram, box, violin, dispresion.
 
-### Chapter 2. Predictive probability
+### Chapter 2. Predictive probability.
 
 - Definition of probability and random events.
 - Discrete and continous probability distributions.
 - Mean and variance as expected values.
 
-### Chapter 3. Parameter estimation
+### Chapter 3. Parameter estimation.
 
 - Variables, parameters and estimators.
 - The Law of Large Numbers (LLN).
 - The Central Limit Theorem (CLT).
 
-### Chapter 4. Hypothesis testing
+### Chapter 4. Hypothesis testing.
 
 - Prediction vs inference.
 - Hypothesis, statistic tests, significance and p-values.
 - Common examples of statistic tests (t-test, Fisher, &chi;<sup>2</sup>)
 
-### Chapter 5. Bayesian probability
+### Chapter 5. Bayesian probability.
 
 - The problem of conditional probability.
 - The frequentist and Bayesian definitions.
