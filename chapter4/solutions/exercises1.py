@@ -1,4 +1,4 @@
 # MRC LMS Introduction to probability, statistics and hypothesis testing
-# Chapter 1: Descriptive statistics
+# Chapter 4: Hypothesis testing
 
 # Exercise 1
