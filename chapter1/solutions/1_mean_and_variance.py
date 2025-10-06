@@ -7,7 +7,7 @@
 # Exercise 1: 
 # Simulate random data following a gaussian distribution
 # Implement a manual computation of mean, median, variance and std
-# Check calculation with numpy / scipy implementations
+# Check calculation with numpy / scipy implementation
 
 
 

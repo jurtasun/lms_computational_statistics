@@ -5,7 +5,7 @@
 
 
 # Exercise 2: 
-# Simulate three gaussian samples
+# Simulate random samples following a gaussian distribution
 # Compute for each the mean and variance
 # Represent data as histogram, box and violin plots
 
@@ -16,6 +16,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+
 
 
 # Simulate data ...............................................................
