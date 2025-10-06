@@ -20,6 +20,7 @@ from scipy import stats
 
 
 # Bernoulli distribution ......................................................
+
 def bernoulli_probability(x, p):
     """
     Calculate the Bernoulli probability of success (x=1) or failure (x=0)
@@ -52,7 +53,6 @@ print(f"Probability of tails (failure) (scipy): {prob_failure_scipy}")
 
 # Binomial distribution .......................................................
 
-# Function computing binomial probability
 def binomial_probability(x, n, p):
     """
     Calculate the binomial probability of getting k successes in n trials
@@ -87,7 +87,6 @@ print(f"Probability {x} 5 questions out of {n}: {probability2}")
 
 # Poisson distribution ........................................................
 
-# Function computing poisson probability
 def poisson_probability(x, lmbda):
     """
     Calculate the probability of observing k events in a Poisson distribution
@@ -122,7 +121,6 @@ print(f"Probability of observing more than {x} cancer patients with average {lmb
 
 # Gaussian distribution .......................................................
 
-# Function computing gaussian probability
 def gaussian_density(x, mu, sigma):
     """
     Calculate the probability of a Gaussian distribution falling between x1 and x2.
