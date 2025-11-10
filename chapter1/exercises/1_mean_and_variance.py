@@ -5,7 +5,8 @@
 
 
 # Exercise 1: 
-# Simulate random data following a gaussian distribution
+# Read the example count data from RNA-seq experiment.
+# Read the example methylation data from EM-seq experiment.
 # Implement a manual computation of mean, median, variance and std
 # Check calculation with numpy / scipy implementation
 

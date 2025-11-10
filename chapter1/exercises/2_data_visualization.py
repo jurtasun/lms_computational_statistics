@@ -5,8 +5,8 @@
 
 
 # Exercise 2: 
-# Simulate random samples following a gaussian distribution
-# Compute for each the mean and variance
+# Read the example count data from RNA-seq experiment.
+# Read the example methylation data from EM-seq experiment.
 # Represent data as histogram, box and violin plots
 
 
