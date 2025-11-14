@@ -1,8 +1,13 @@
+This course provides an introduction to computational statistics. 
+The aim of the course is to build simple and accessible yet strong mathematical foundations in probability theory, descriptive statistics, 
+and hypothesis testing while learning how to interpret and analyze data with clarity and confidence.
 
-This course provides an introduction to the fields of probability and statistic inference.
-The topics covered will include basic concepts on probability theory, descriptive statistics, inference, and hypothesis testing. 
-The aim of the course is to provide strong foundations at both the mathematical and theoretical level, while providing practical exercises to work on real data.
-
-The course is organized in five chapters, covering the topics listed below. 
-All will be followed by a practical session and hands-on coding, both in `Python` and `R`. 
+In each chapter, we will navigate together through practical exercises that connect theory to real-world applications, using Python and R with real datasets. 
 No prior mathematical or programming experience is required to attend this course.
+Everyone is welcome!
+
+Dates:
+Mon	19/01	10:00—12:00
+Mon	26/01	10:00—12:00
+Mon	02/02	10:00—12:00
+Mon	09/02	10:00—12:00

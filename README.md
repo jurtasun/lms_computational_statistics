@@ -1,4 +1,4 @@
-## MRC LMS - Introduction to probability, statistics and hypothesis testing
+## MRC LMS - Introduction to computational statistics
 
 ### Jesús Urtasun Elizari, MRC LMS & RCDS ICL
 
@@ -26,41 +26,36 @@ The course is organized in four chapters, covering the topics listed below.
 
 - The idea of population and sampling.
 - Describe central tendency and variation.
-- Data visualization: histogram, box, violin, dispresion.
+- Data visualization: histogram, box, violin, dispersion.
 
 ### Chapter 2. Predictive probability.
 
 - Definition of probability and random events.
-- Discrete and continous probability distributions.
+- Discrete (Binomial, Poisson) and continuous (Gaussian) probability distributions.
 - Examples of RNA-seq, Variant Calling, and Methylation data.
 
 ### Chapter 3. Parameter estimation.
 
-- Variables, parameters and estimators.
+- Prediction vs inference. Variables, parameters and estimators.
 - The Law of Large Numbers (LLN).
 - The Central Limit Theorem (CLT).
-- Computing expected values.
+- Computing expected values confidence intervals.
 
 ### Chapter 4. Hypothesis testing.
 
-- Prediction vs inference.
-- Hypothesis, statistic tests, significance and p-values.
-- Common examples of statistic tests (t-test, Fisher, &chi;<sup>2</sup>)
-
-### Chapter 5. Bayesian probability.
-
-- The problem of conditional probability.
-- The frequentist and Bayesian definitions.
-- The Bayes rule and applications.
+- Formulating hypothesis. General approach to hypothesis testing.
+- Common examples of statistic tests (t-test, Fisher exact and ANOVA, &chi;<sup>2</sup>).
+- Parametric vs non-parametric tests.
+- Revisiting P-values: errors, power, and Bayesian probability.
 
 ## Setting up `Python` and `R` on your own machine
 Setting up `Python` and `R` on your own machine
 
 ### Instructions for Mac and Linux
-Instructions for Mac and Linux
+Instructions for Mac and Linux (...)
 
 ### Instructions for Windows
-Instructions for Windows
+Instructions for Windows (...)
 
 ## Licence
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licence](http://creativecommons.org/licenses/by-nc-sa/4.0/).
