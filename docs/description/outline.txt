@@ -1,0 +1,30 @@
+Introduction to computational statistics
+
+Roadmap of the course:
+
+Chapter 1. Descriptive statistics.
+
+— The idea of population and sampling.
+— Describe central tendency and variation.
+— Data visualization: histogram, box, violin, dispersion.
+
+Chapter 2. Predictive probability.
+
+— Definition of probability and random events.
+— Discrete events: Bernoulli, Binomial, Poisson distributions.
+— Continuous events: Uniform, Exponential, Gaussian distributions.
+— Mean and variance as expected values.
+
+Chapter 3. Parameter estimation.
+
+— Prediction vs inference. Variables, parameters and estimators.
+— The Law of Large Numbers (LLN).
+— The Central Limit Theorem (CLT).
+— Compute expected values confidence intervals.
+
+Chapter 4. Hypothesis testing and Bayesian probability.
+
+— General approach to hypothesis testing.
+— Common examples of statistical tests (t-test, Fisher exact, ANOVA, χ2).
+— Parametric vs non-parametric tests.
+— Revisiting P-values: errors, power, and Bayesian probability.

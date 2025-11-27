@@ -1,0 +1,13 @@
+This course provides an introduction to computational statistics. 
+The aim of the course is to build simple and accessible yet strong mathematical foundations in probability theory, descriptive statistics, 
+and hypothesis testing while learning how to interpret and analyze data with clarity and confidence.
+
+In each chapter, we will navigate together through practical exercises that connect theory to real-world applications, using Python and R with real datasets. 
+No prior mathematical or programming experience is required to attend this course.
+Everyone is welcome!
+
+Dates:
+Mon	19/01	10:00—12:00
+Mon	26/01	10:00—12:00
+Mon	02/02	10:00—12:00
+Mon	09/02	10:00—12:00
