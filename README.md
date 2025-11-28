@@ -22,13 +22,14 @@ The course is organized in four chapters, covering the topics listed below.
 
 ## Roadmap of the course
 
-### Chapter 1. Descriptive statistics.
+### Chapter 1. Prediction and inference.
 
-- The idea of population and sampling.
-- Describe central tendency and variation.
+- General frameworks for statistics and probability.
+- The idea of descriptive statistics, population and sampling.
+- The idea of predictive probability and random events.
 - Data visualization: histogram, box, violin, dispersion.
 
-### Chapter 2. Predictive probability.
+### Chapter 2. Foundations of probability.
 
 - Definition of probability and random events.
 - Discrete events: Bernoulli, Binomial, Poisson distributions.
