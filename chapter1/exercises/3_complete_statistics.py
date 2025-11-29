@@ -30,8 +30,8 @@ print("\nEM-seq data\n", emseq.head())
 print("\nEM-seq dimensions: ", emseq.shape)
 
 rnaseq = pd.read_csv("data/rnaseq_counts.cleaned.csv")
-print("\nRNA-seq data\n rnaseq.head())
-print("\nRNA-seq dimensions: ", rnaseq.shape))
+print("\nRNA-seq data\n", rnaseq.head())
+print("\nRNA-seq dimensions: ", rnaseq.shape)
 
 
 
@@ -73,6 +73,7 @@ sns.boxplot(data = samples)
 plt.xticks(range(2), labels)
 plt.ylabel("Score")
 plt.grid(True, alpha = 0.3)
+plt.savefig("emseq_box.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 # Violin plot
@@ -81,6 +82,7 @@ sns.violinplot(data = samples)
 plt.xticks(range(2), labels)
 plt.ylabel("Score")
 plt.grid(True, alpha = 0.3)
+plt.savefig("emseq_violin.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 # Histogram
@@ -93,6 +95,7 @@ plt.xlabel("Score")
 plt.ylabel("Frequency")
 plt.legend()
 plt.grid(True, alpha = 0.3)
+plt.savefig("emseq_histogram.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 
@@ -115,6 +118,7 @@ sns.boxplot(data = samples)
 plt.xticks(range(2), labels)
 plt.ylabel("Expression")
 plt.grid(True, alpha = 0.3)
+plt.savefig("rnaseq_box.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 # Violin plot
@@ -123,6 +127,7 @@ sns.violinplot(data = samples)
 plt.xticks(range(2), labels)
 plt.ylabel("Expression")
 plt.grid(True, alpha = 0.3)
+plt.savefig("rnaseq_violin.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 # Histogram
@@ -135,6 +140,7 @@ plt.xlabel("Expression")
 plt.ylabel("Frequency")
 plt.legend()
 plt.grid(True, alpha = 0.3)
+plt.savefig("rnaseq_histogram.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 
