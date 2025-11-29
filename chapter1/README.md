@@ -1,4 +1,4 @@
-## MRC LMS - Introduction to probability, statistics and hypothesis testing
+## MRC LMS - Introduction to computational statistics
 
 ### Jesús Urtasun Elizari, MRC LMS & RCDS ICL
 
