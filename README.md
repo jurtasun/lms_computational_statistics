@@ -51,21 +51,15 @@ The course is organized in four chapters, covering the topics listed below.
 - Revisiting P-values: errors, power, and Bayesian probability.
 
 ## Setting up your `codespace`
-Setting up your `codespace`
 
 Navigate to the green `code` tab
-
-<div style="background:#000; padding:10px; display:inline-block;">
-  <img src="/readme_figures/codespaces1.png" width="350">
-</div>
+<img src="/readme_figures/codespaces1.png" width="800">
 
 Press the `codespaces` tab
-
-<img src="/readme_figures/codespaces2.png" width = 700>
+<img src="/readme_figures/codespaces2.png" width = 500>
 
 Press the `create a codespace in main` tab
-
-<img src="/readme_figures/codespaces3.png" width = 700>
+<img src="/readme_figures/codespaces3.png" width = 500>
 
 ## Setting up `Python` and `R` on your own machine
 Setting up `Python` and `R` on your own machine
