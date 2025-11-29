@@ -53,13 +53,18 @@ The course is organized in four chapters, covering the topics listed below.
 ## Setting up your `codespace`
 Setting up your `codespace`
 
-Navigate to the `code` tab
-<img src="/readme_figures/codespaces1.png" width = 700>
+Navigate to the green `code` tab
+
+<div style="background:#000; padding:10px; display:inline-block;">
+  <img src="/readme_figures/codespaces1.png" width="350">
+</div>
 
 Press the `codespaces` tab
+
 <img src="/readme_figures/codespaces2.png" width = 700>
 
 Press the `create a codespace in main` tab
+
 <img src="/readme_figures/codespaces3.png" width = 700>
 
 ## Setting up `Python` and `R` on your own machine
