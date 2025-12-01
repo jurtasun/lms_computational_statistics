@@ -33,19 +33,16 @@ emseq = emseq.drop(columns=coverage_cols)
 
 # ---- 3. Rename columns with _rep1 and _rep2 consistently ----
 rename_map = {
-    # 3uM treatment
     "Met_1_numCs": "3uM_rep1_numCs",
     "Met_1_numTs": "3uM_rep1_numTs",
     "Met_2_numCs": "3uM_rep2_numCs",
     "Met_2_numTs": "3uM_rep2_numTs",
 
-    # 6uM treatment
     "Met_3_numCs": "6uM_rep1_numCs",
     "Met_3_numTs": "6uM_rep1_numTs",
     "Met_4_numCs": "6uM_rep2_numCs",
     "Met_4_numTs": "6uM_rep2_numTs",
 
-    # 200uM treatment
     "Met_5_numCs": "200uM_rep1_numCs",
     "Met_5_numTs": "200uM_rep1_numTs",
     "Met_6_numCs": "200uM_rep2_numCs",
@@ -62,6 +59,12 @@ emseq = emseq.drop_duplicates(subset=numeric_cols, keep="first")
 after = len(emseq)
 
 print(f"Removed {before - after} duplicated EM-seq windows")
+
+# ---- 5. Randomly remove 1/10 of EM-seq rows ----
+import numpy as np
+np.random.seed(42)  # reproducible
+emseq = emseq.sample(frac=0.9, random_state=42)
+print("✔ Downsampled EM-seq: kept 90% of rows, removed 10%")
 
 # ---- Save cleaned EM-seq ----
 emseq.to_csv("emseq_counts.cleaned.csv", index=False)
