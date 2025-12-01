@@ -52,96 +52,15 @@ s_200uM_rep2 = score(emseq["200uM_rep2_numCs"], emseq["200uM_rep2_numTs"])
 score_200uM = (s_200uM_rep1 + s_200uM_rep2) / 2
 
 
-#  RNA-seq expression: extract deprived vs control
-
+#  RNA-seq: extract deprived vs control
 rnaseq_3uM = rnaseq[[c for c in rnaseq.columns if "3uM" in c]]
 rnaseq_200uM = rnaseq[[c for c in rnaseq.columns if "200uM" in c]]
 
+# Remove genes with zero total counts
+rnaseq_3uM = rnaseq_3uM[rnaseq_3uM.sum(axis = 1) > 0]
+rnaseq_200uM = rnaseq_200uM[rnaseq_200uM.sum(axis = 1) > 0]
 exp_3uM = rnaseq_3uM.values.flatten()
 exp_200uM = rnaseq_200uM.values.flatten()
-
-
-# Plot EM-seq data ............................................................
-
-# Prepare for plot
-samples = [score_3uM.values, score_200uM.values]
-labels = ["3uM Deprived", "200uM Control"]
-
-# Box plot
-plt.figure(figsize = (8, 5))
-sns.boxplot(data = samples)
-plt.xticks(range(2), labels)
-plt.ylabel("Score")
-plt.grid(True, alpha = 0.3)
-plt.savefig("emseq_box.png", dpi=300, bbox_inches="tight")
-plt.show()
-
-# Violin plot
-plt.figure(figsize = (8, 5))
-sns.violinplot(data = samples)
-plt.xticks(range(2), labels)
-plt.ylabel("Score")
-plt.grid(True, alpha = 0.3)
-plt.savefig("emseq_violin.png", dpi=300, bbox_inches="tight")
-plt.show()
-
-# Histogram
-all_data = np.concatenate(samples)
-bins = np.linspace(all_data.min(), all_data.max(), 30)
-plt.figure(figsize = (8, 5))
-plt.hist(samples[0], bins = bins, label = labels[0], alpha = 0.5, edgecolor = "black", linewidth = 0.8)
-plt.hist(samples[1], bins = bins, label = labels[1], alpha = 0.5, edgecolor = "black", linewidth = 0.8)
-plt.xlabel("Score")
-plt.ylabel("Frequency")
-plt.legend()
-plt.grid(True, alpha = 0.3)
-plt.savefig("emseq_histogram.png", dpi=300, bbox_inches="tight")
-plt.show()
-
-
-
-# Plot RNA-seq data (raw values) ........................................................
-
-# Prepare for plot
-samples = [exp_3uM, exp_200uM]
-labels = ["3uM Deprived", "200uM Control"]
-
-# Log transform for proper visualization
-log_3uM = np.log1p(exp_3uM)
-log_200uM = np.log1p(exp_200uM)
-samples = [log_3uM, log_200uM]
-labels = ["3uM Deprived (log)", "200uM Control (log)"]
-
-# Box plot
-plt.figure(figsize = (8, 5))
-sns.boxplot(data = samples)
-plt.xticks(range(2), labels)
-plt.ylabel("Expression")
-plt.grid(True, alpha = 0.3)
-plt.savefig("rnaseq_box.png", dpi=300, bbox_inches="tight")
-plt.show()
-
-# Violin plot
-plt.figure(figsize = (8, 5))
-sns.violinplot(data = samples)
-plt.xticks(range(2), labels)
-plt.ylabel("Expression")
-plt.grid(True, alpha = 0.3)
-plt.savefig("rnaseq_violin.png", dpi=300, bbox_inches="tight")
-plt.show()
-
-# Histogram
-all_data = np.concatenate(samples)
-bins = np.linspace(all_data.min(), all_data.max(), 30)
-plt.figure(figsize = (8, 5))
-plt.hist(samples[0], bins = bins, label = labels[0], alpha = 0.5, edgecolor = "black", linewidth = 0.8)
-plt.hist(samples[1], bins = bins, label = labels[1], alpha = 0.5, edgecolor = "black", linewidth = 0.8)
-plt.xlabel("Expression")
-plt.ylabel("Frequency")
-plt.legend()
-plt.grid(True, alpha = 0.3)
-plt.savefig("rnaseq_histogram.png", dpi=300, bbox_inches="tight")
-plt.show()
 
 
 
@@ -194,7 +113,112 @@ def print_stats(x, label):
     print("Manual std:", manual_std(x))
     print("Numpy std:", np.std(x))
 
+
+# Check summary stats
 print_stats(score_3uM.values, "EM-seq score 3uM (deprived)")
 print_stats(score_200uM.values, "EM-seq score 200uM (control)")
 print_stats(exp_3uM, "RNA-seq expression 3uM (deprived)")
 print_stats(exp_200uM, "RNA-seq expression 200uM (control)")
+
+
+
+# Plot EM-seq data ............................................................
+
+# Prepare for plot
+samples = [score_3uM.values, score_200uM.values]
+labels = ["3uM Deprived", "200uM Control"]
+
+# Box plot
+plt.figure(figsize = (8, 5))
+sns.boxplot(data = samples)
+plt.xticks(range(2), labels)
+plt.ylabel("Score")
+plt.grid(True, alpha = 0.3)
+plt.savefig("emseq_box.png", dpi=300, bbox_inches="tight")
+plt.show()
+
+# Violin plot
+plt.figure(figsize = (8, 5))
+sns.violinplot(data = samples)
+plt.xticks(range(2), labels)
+plt.ylabel("Score")
+plt.grid(True, alpha = 0.3)
+plt.savefig("emseq_violin.png", dpi=300, bbox_inches="tight")
+plt.show()
+
+# Histogram  (ADDED mean + variance lines)
+all_data = np.concatenate(samples)
+bins = np.linspace(all_data.min(), all_data.max(), 30)
+plt.figure(figsize = (8, 5))
+plt.hist(samples[0], bins = bins, label = labels[0], alpha = 0.5, edgecolor = "black", linewidth = 0.8)
+plt.hist(samples[1], bins = bins, label = labels[1], alpha = 0.5, edgecolor = "black", linewidth = 0.8)
+
+# Add summary stats for plot
+m = manual_mean(all_data)
+v = manual_variance(all_data)
+sd = np.sqrt(v)
+
+plt.axvline(m, color="red", linestyle="--", label=f"mean = {m:.3f}")
+plt.axvline(m-sd, color="blue", linestyle=":", label="mean - sd")
+plt.axvline(m+sd, color="blue", linestyle=":", label="mean + sd")
+
+plt.xlabel("Score")
+plt.ylabel("Frequency")
+plt.legend()
+plt.grid(True, alpha = 0.3)
+plt.savefig("emseq_histogram.png", dpi=300, bbox_inches="tight")
+plt.show()
+
+
+
+# Plot RNA-seq data (raw values) ........................................................
+
+# Prepare for plot
+samples = [exp_3uM, exp_200uM]
+labels = ["3uM Deprived", "200uM Control"]
+
+# Log transform for proper visualization
+log_3uM = np.log1p(exp_3uM)
+log_200uM = np.log1p(exp_200uM)
+samples = [log_3uM, log_200uM]
+labels = ["3uM Deprived (log)", "200uM Control (log)"]
+
+# Box plot
+plt.figure(figsize = (8, 5))
+sns.boxplot(data = samples)
+plt.xticks(range(2), labels)
+plt.ylabel("Expression")
+plt.grid(True, alpha = 0.3)
+plt.savefig("rnaseq_box.png", dpi=300, bbox_inches="tight")
+plt.show()
+
+# Violin plot
+plt.figure(figsize = (8, 5))
+sns.violinplot(data = samples)
+plt.xticks(range(2), labels)
+plt.ylabel("Expression")
+plt.grid(True, alpha = 0.3)
+plt.savefig("rnaseq_violin.png", dpi=300, bbox_inches="tight")
+plt.show()
+
+# Histogram (ADDED mean + variance)
+all_data = np.concatenate(samples)
+bins = np.linspace(all_data.min(), all_data.max(), 30)
+plt.figure(figsize = (8, 5))
+plt.hist(samples[0], bins = bins, label = labels[0], alpha = 0.5, edgecolor = "black", linewidth = 0.8)
+plt.hist(samples[1], bins = bins, label = labels[1], alpha = 0.5, edgecolor = "black", linewidth = 0.8)
+
+m = manual_mean(all_data)
+v = manual_variance(all_data)
+sd = np.sqrt(v)
+
+plt.axvline(m, color="red", linestyle="--", label=f"mean = {m:.3f}")
+plt.axvline(m-sd, color="blue", linestyle=":", label="mean - sd")
+plt.axvline(m+sd, color="blue", linestyle=":", label="mean + sd")
+
+plt.xlabel("Expression")
+plt.ylabel("Frequency")
+plt.legend()
+plt.grid(True, alpha = 0.3)
+plt.savefig("rnaseq_histogram.png", dpi=300, bbox_inches="tight")
+plt.show()
